@@ -3,7 +3,9 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class PaginationApiService {
 
   constructor(private http: Http) {

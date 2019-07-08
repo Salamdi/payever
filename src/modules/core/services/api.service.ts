@@ -5,7 +5,9 @@ import { map } from 'rxjs/operators';
 import { UserInterface } from '../../../interfaces';
 import { PaginationApiService } from './pagination-api.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ApiService {
 
   constructor(private http: Http, private paginationApiService: PaginationApiService) {
